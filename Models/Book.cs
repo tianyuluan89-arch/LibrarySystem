@@ -1,10 +1,21 @@
-namespace LibrarySystem.Models;
+using System.ComponentModel.DataAnnotations;
 
-public class Book
+namespace LibrarySystem.Models
 {
-    public int Id { get; set; }
-    public string Title { get; set; } = string.Empty;
-    public string Author { get; set; } = string.Empty;
-    public string ISBN { get; set; } =string.Empty;
-    public int AvailableQuantity {get;set;}
+    public class Book
+    {
+        public int Id { get; set; }
+
+        [Required(ErrorMessage = "Title is required")]
+        public string Title { get; set; } = string.Empty;
+
+        [Required(ErrorMessage = "Author is required")]
+        public string Author { get; set; } = string.Empty;
+
+        [Required(ErrorMessage = "Isbn is required")]
+        public string Isbn { get; set; } = string.Empty;
+
+        [Range(0, int.MaxValue, ErrorMessage = "Quantity cannot be negative")]
+        public int AvailableQuantity { get; set; }
+    }
 }
