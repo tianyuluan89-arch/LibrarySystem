@@ -1,5 +1,10 @@
 C:\Users\MC\Desktop\LibrarySystem\bin\Debug\net9.0\appsettings.Development.json
 C:\Users\MC\Desktop\LibrarySystem\bin\Debug\net9.0\appsettings.json
+C:\Users\MC\Desktop\LibrarySystem\bin\Debug\net9.0\LibrarySystem\appsettings.Development.json
+C:\Users\MC\Desktop\LibrarySystem\bin\Debug\net9.0\LibrarySystem\appsettings.json
+C:\Users\MC\Desktop\LibrarySystem\bin\Debug\net9.0\LibrarySystem\obj\LibrarySystem.csproj.nuget.dgspec.json
+C:\Users\MC\Desktop\LibrarySystem\bin\Debug\net9.0\LibrarySystem\obj\project.assets.json
+C:\Users\MC\Desktop\LibrarySystem\bin\Debug\net9.0\LibrarySystem\Properties\launchSettings.json
 C:\Users\MC\Desktop\LibrarySystem\bin\Debug\net9.0\LibrarySystem.staticwebassets.endpoints.json
 C:\Users\MC\Desktop\LibrarySystem\bin\Debug\net9.0\LibrarySystem.exe
 C:\Users\MC\Desktop\LibrarySystem\bin\Debug\net9.0\LibrarySystem.deps.json
@@ -31,8 +36,3 @@ C:\Users\MC\Desktop\LibrarySystem\obj\Debug\net9.0\refint\LibrarySystem.dll
 C:\Users\MC\Desktop\LibrarySystem\obj\Debug\net9.0\LibrarySystem.pdb
 C:\Users\MC\Desktop\LibrarySystem\obj\Debug\net9.0\LibrarySystem.genruntimeconfig.cache
 C:\Users\MC\Desktop\LibrarySystem\obj\Debug\net9.0\ref\LibrarySystem.dll
-C:\Users\MC\Desktop\LibrarySystem\bin\Debug\net9.0\LibrarySystem\appsettings.Development.json
-C:\Users\MC\Desktop\LibrarySystem\bin\Debug\net9.0\LibrarySystem\appsettings.json
-C:\Users\MC\Desktop\LibrarySystem\bin\Debug\net9.0\LibrarySystem\obj\LibrarySystem.csproj.nuget.dgspec.json
-C:\Users\MC\Desktop\LibrarySystem\bin\Debug\net9.0\LibrarySystem\obj\project.assets.json
-C:\Users\MC\Desktop\LibrarySystem\bin\Debug\net9.0\LibrarySystem\Properties\launchSettings.json
