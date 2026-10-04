@@ -1,4 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
+using LibrarySystem.Services;
+using LibrarySystem.Models;
 
 namespace LibrarySystem.Controllers
 {
@@ -6,20 +8,42 @@ namespace LibrarySystem.Controllers
     [Route("api/[controller]")]
     public class BorrowController : ControllerBase
     {
-        [HttpPost("borrow")]
-        public IActionResult Borrow(int bookId, int readerId)
-        {
-        
+        private readonly LibraryService _service = new LibraryService();
 
-            var result = new
+        [HttpPost("borrow")]
+        public ActionResult<BorrowRecord> Borrow(int bookId, int readerId)
+        {
+            try
             {
-                id = 1,
-                bookId = bookId,
-                readerId = readerId,
-                borrowDate = DateTime.Now.ToString("yyyy-MM-ddTHH:mm:ss"),
-                returnDate = (string?)null
-            };
-            return Ok(result);
+                var res = _service.BorrowBook(bookId, readerId);
+                return Ok(res);
+            }
+            catch (KeyNotFoundException)
+            {
+                return NotFound("Book not found");
+            }
+            catch (InvalidOperationException ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+        [HttpPost("return/{recordId}")]
+        public ActionResult Return(int recordId)
+        {
+            try
+            {
+                _service.ReturnBook(recordId);
+                return Ok();
+            }
+            catch (KeyNotFoundException)
+            {
+                return NotFound("Record not found");
+            }
+            catch (InvalidOperationException ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
     }
 }

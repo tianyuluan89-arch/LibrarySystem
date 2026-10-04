@@ -1,11 +1,22 @@
 using LibrarySystem.Models;
+using System.Collections.Generic;
 
-namespace LibrarySystem
+namespace LibrarySystem.Data
 {
-    public static class DataStore
+    public class DataStore
     {
-        // 初始化集合，防止 null
-        public static List<Book> Books { get; set; } = new List<Book>();
-        public static int NextBookId = 1;
+        // 静态单例 Instance，解决红色波浪
+        public static DataStore Instance { get; } = new DataStore();
+
+        public List<Book> Books { get; set; }
+        public List<BorrowRecord> BorrowRecords { get; set; }
+        public List<Reader> Readers { get; set; }
+
+        private DataStore()
+        {
+            Books = new List<Book>();
+            BorrowRecords = new List<BorrowRecord>();
+            Readers = new List<Reader>();
+        }
     }
 }
